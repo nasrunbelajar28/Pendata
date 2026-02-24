@@ -1,0 +1,11 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+chapters:
+- file: Pertemuan 1
+- file: Pertemuan 2
+- file: Pertemuan 3
+- file: Pertemuan 4
+- file: Pertemuan 5
