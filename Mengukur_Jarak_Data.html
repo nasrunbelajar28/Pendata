@@ -184,6 +184,32 @@
 <li class="toctree-l1"><a class="reference internal" href="Pertemuan1.html">Pertemuan 1</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Pertemuan2.html"><strong>Eksplorasi Data</strong></a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>Mengukur Jarak Data</strong></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </ul>
 
     </div>
@@ -379,8 +405,82 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Mengukur Jarak Data</strong></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengukur-jarak-data-tipe-numerik"><strong>Mengukur Jarak Data (Tipe Numerik)</strong></a></li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#minkowski-distance"><strong>1. Minkowski Distance</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#manhattan-distance"><strong>2. Manhattan Distance</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#euclidean-distance"><strong>3. Euclidean Distance</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#average-distance"><strong>4. Average Distance</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#weighted-euclidean-distance"><strong>5. Weighted Euclidean Distance</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#chord-distance"><strong>6. Chord Distance</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mahalanobis-distance"><strong>7. Mahalanobis Distance</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#cosine-similarity"><strong>8. Cosine Similarity</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pearson-correlation"><strong>9. Pearson Correlation</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#biner-simetris"><strong>Biner Simetris</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mengukur-jarak-tipe-categorical-nominal"><strong>Mengukur Jarak Tipe Categorical (Nominal)</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#overlay-metric-om"><strong>1. Overlay Metric (OM)</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#value-difference-metric-vdm"><strong>2. Value Difference Metric (VDM)</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-jarak-tipe-campuran"><strong>Menghitung Jarak Tipe Campuran</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-iris-numerik"><strong>Dataset Iris (Numerik)</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#persamaan-umum">Persamaan Umum</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-pada-fitur-iris">Implementasi pada fitur Iris</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-perhitungan">Contoh Perhitungan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Manhattan Distance</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Persamaan Umum:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Implementasi pada fitur Iris:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Contoh Perhitungan:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ringkasan-hasil">Ringkasan Hasil</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id5"><strong>Euclidean Distance</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id6"><strong>Manhattan Distance</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-student-performance-campuran"><strong>Dataset student performance (Campuran)</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tabel-tipe-data-dan-penjelasan-kolom-atribut"><strong>Tabel Tipe Data dan Penjelasan Kolom / Atribut</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tabel-tipe-data-dan-penjelasan-kolom-studentsperformance">Tabel Tipe Data dan Penjelasan Kolom (StudentsPerformance)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kolom-yang-digunakan-untuk-perhitungan-jarak">Kolom yang Digunakan untuk Perhitungan Jarak</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numerik">Numerik</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#euclidean-distance-normalized">Euclidean Distance (Normalized)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parameter-range-r-k">Parameter Range <span class="math notranslate nohighlight">\((R_k)\)</span>:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-data">Contoh Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Contoh Perhitungan</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perhitungan-manhattan-distance-normalized">Perhitungan Manhattan Distance (Normalized)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Parameter Range <span class="math notranslate nohighlight">\((R_k)\)</span>:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#substitusi-nilai-ke-dalam-rumus">Substitusi nilai ke dalam rumus</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#binary-categorical">Binary &amp; Categorical</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#berdasarkan-data-sampel">Berdasarkan data sampel</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#fitur-binary-gender"><strong>1. Fitur Binary (<code class="docutils literal notranslate"><span class="pre">gender</span></code>)</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#fitur-categorical-lunch"><strong>2. Fitur Categorical (<code class="docutils literal notranslate"><span class="pre">lunch</span></code>)</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-jarak"><strong>Hasil Jarak</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ordinal">Ordinal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perhitungan-jarak-ordinal-parental-level-of-education">Perhitungan Jarak Ordinal (Parental Level of Education)</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#menentukan-peringkat-r-if-dan-nilai-maksimum-m-f"><strong>1. Menentukan Peringkat <span class="math notranslate nohighlight">\((r_{if})\)</span> dan Nilai Maksimum <span class="math notranslate nohighlight">\((M_f)\)</span></strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#normalisasi-nilai-z-if"><strong>2. Normalisasi Nilai <span class="math notranslate nohighlight">\((z_{if})\)</span></strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#perhitungan-normalisasi"><strong>Perhitungan Normalisasi</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-jarak-manhattan-pada-nilai-z-if"><strong>3. Menghitung Jarak Manhattan pada Nilai <span class="math notranslate nohighlight">\(z_{if}\)</span></strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gowers-similarity-coefficient-tipe-campuran"><strong>Gower’s Similarity Coefficient (Tipe Campuran)</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rekapitulasi-kontribusi-jarak-d-ij-f"><strong>1. Rekapitulasi Kontribusi Jarak <span class="math notranslate nohighlight">\((d_{ij}^{(f)})\)</span></strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#substitusi-ke-rumus-gower"><strong>2. Substitusi ke Rumus Gower</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan-akhir"><strong>Kesimpulan Akhir</strong></a></li>
+</ul>
+</li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -410,8 +510,11 @@ v_1 = (x_1, x_2, \ldots, x_n)
 \)</span><span class="math notranslate nohighlight">\(
 v_2 = (y_1, y_2, \ldots, y_n)
 \)</span><span class="math notranslate nohighlight">\(di mana \)</span>x_i<span class="math notranslate nohighlight">\( dan \)</span>y_i$ disebut atribut. Ada beberapa ukuran similaritas atau ukuran jarak, di antaranya:</p>
-<p>##<strong>1. Minkowski Distance</strong>
-Minkowski adalah ukuran jarak umum yang mencakup Euclidean dan Manhattan sebagai kasus khusus.</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="minkowski-distance">
+<h1><strong>1. Minkowski Distance</strong><a class="headerlink" href="#minkowski-distance" title="Link to this heading">#</a></h1>
+<p>Minkowski adalah ukuran jarak umum yang mencakup Euclidean dan Manhattan sebagai kasus khusus.</p>
 <div class="math notranslate nohighlight">
 \[
 d(x,y) = \left( \sum_{i=1}^{n} |x_i - y_i|^m \right)^{\frac{1}{m}}, \quad m \ge 1
@@ -420,59 +523,77 @@ d(x,y) = \left( \sum_{i=1}^{n} |x_i - y_i|^m \right)^{\frac{1}{m}}, \quad m \ge 
 <li><p><span class="math notranslate nohighlight">\(m=1\)</span> → Manhattan</p></li>
 <li><p><span class="math notranslate nohighlight">\(m=2\)</span> → Euclidean</p></li>
 </ul>
-<p>##<strong>2. Manhattan Distance</strong>
-Menghitung jarak sebagai jumlah selisih absolut tiap atribut.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="manhattan-distance">
+<h1><strong>2. Manhattan Distance</strong><a class="headerlink" href="#manhattan-distance" title="Link to this heading">#</a></h1>
+<p>Menghitung jarak sebagai jumlah selisih absolut tiap atribut.</p>
 <div class="math notranslate nohighlight">
 \[
 d(x,y) = \sum_{i=1}^{n} |x_i - y_i|
 \]</div>
-<p>##<strong>3. Euclidean Distance</strong><br />
-Jarak garis lurus antar dua titik, paling sering digunakan.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="euclidean-distance">
+<h1><strong>3. Euclidean Distance</strong><a class="headerlink" href="#euclidean-distance" title="Link to this heading">#</a></h1>
+<p>Jarak garis lurus antar dua titik, paling sering digunakan.</p>
 <div class="math notranslate nohighlight">
 \[
 d(x,y) = \sqrt{\sum_{i=1}^{n} (x_i - y_i)^2}
 \]</div>
 <p>Kelemahan: sensitif terhadap skala besar dan outlier.</p>
-<p>##<strong>4. Average Distance</strong><br />
-Versi rata-rata dari Euclidean untuk mengurangi pengaruh jumlah dimensi.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="average-distance">
+<h1><strong>4. Average Distance</strong><a class="headerlink" href="#average-distance" title="Link to this heading">#</a></h1>
+<p>Versi rata-rata dari Euclidean untuk mengurangi pengaruh jumlah dimensi.</p>
 <div class="math notranslate nohighlight">
 \[
 d(x,y) = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (x_i - y_i)^2}
 \]</div>
-<p>##<strong>5. Weighted Euclidean Distance</strong><br />
-Memberikan bobot pada setiap atribut.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="weighted-euclidean-distance">
+<h1><strong>5. Weighted Euclidean Distance</strong><a class="headerlink" href="#weighted-euclidean-distance" title="Link to this heading">#</a></h1>
+<p>Memberikan bobot pada setiap atribut.</p>
 <div class="math notranslate nohighlight">
 \[
 d(x,y) = \sqrt{\sum_{i=1}^{n} w_i (x_i - y_i)^2}
 \]</div>
-<p>##<strong>6. Chord Distance</strong><br />
-Modifikasi Euclidean berbasis normalisasi panjang vektor.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="chord-distance">
+<h1><strong>6. Chord Distance</strong><a class="headerlink" href="#chord-distance" title="Link to this heading">#</a></h1>
+<p>Modifikasi Euclidean berbasis normalisasi panjang vektor.</p>
 <div class="math notranslate nohighlight">
 \[
 d(x,y) = \sqrt{2 - 2 \frac{\sum x_i y_i}{\|x\| \|y\|}}
 \]</div>
-<p>##<strong>7. Mahalanobis Distance</strong><br />
-Memperhitungkan korelasi antar atribut (lebih akurat untuk data kompleks).</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="mahalanobis-distance">
+<h1><strong>7. Mahalanobis Distance</strong><a class="headerlink" href="#mahalanobis-distance" title="Link to this heading">#</a></h1>
+<p>Memperhitungkan korelasi antar atribut (lebih akurat untuk data kompleks).</p>
 <div class="math notranslate nohighlight">
 \[
 d(x,y) = \sqrt{(x - y)^T S^{-1} (x - y)}
 \]</div>
-<p>##<strong>8. Cosine Similarity</strong><br />
-Mengukur kemiripan arah (sering dipakai pada teks/dokumen).</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="cosine-similarity">
+<h1><strong>8. Cosine Similarity</strong><a class="headerlink" href="#cosine-similarity" title="Link to this heading">#</a></h1>
+<p>Mengukur kemiripan arah (sering dipakai pada teks/dokumen).</p>
 <div class="math notranslate nohighlight">
 \[
 \cos(x,y) = \frac{\sum x_i y_i}{\|x\| \|y\|}
 \]</div>
-<p>##<strong>9. Pearson Correlation</strong><br />
-Mengukur hubungan linear antar dua data.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="pearson-correlation">
+<h1><strong>9. Pearson Correlation</strong><a class="headerlink" href="#pearson-correlation" title="Link to this heading">#</a></h1>
+<p>Mengukur hubungan linear antar dua data.</p>
 <div class="math notranslate nohighlight">
 \[
 r = \frac{\sum (x_i - \mu_x)(y_i - \mu_y)}{\sqrt{\sum (x_i - \mu_x)^2} \sqrt{\sum (y_i - \mu_y)^2}}
 \]</div>
 <p>Kelemahan: sensitif terhadap outlier.</p>
 <p>##<strong>Jarak Atribut Binary</strong></p>
-<p>##<strong>Biner Simetris</strong>
-Biner simetris adalah atribut biner di mana kedua nilai (0 dan 1) sama pentingnya. Nilai 1 tidak lebih penting dari 0, begitupun sebaliknya. Rumus menghitung jarak data dengan atribut biner simetris sebagai berikut:</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="biner-simetris">
+<h1><strong>Biner Simetris</strong><a class="headerlink" href="#biner-simetris" title="Link to this heading">#</a></h1>
+<p>Biner simetris adalah atribut biner di mana kedua nilai (0 dan 1) sama pentingnya. Nilai 1 tidak lebih penting dari 0, begitupun sebaliknya. Rumus menghitung jarak data dengan atribut biner simetris sebagai berikut:</p>
 <div class="math notranslate nohighlight">
 \[
 d(x,y) = \sum_{i=1}^{n} |x_i - y_i|
@@ -484,10 +605,14 @@ d(x,y) = \sum_{i=1}^{n} |x_i - y_i|
 <li><p><span class="math notranslate nohighlight">\(x_i\)</span> merupakan fitur ke-<span class="math notranslate nohighlight">\(i\)</span> dari data pertama</p></li>
 <li><p><span class="math notranslate nohighlight">\(y_i\)</span> merupakan fitur ke-<span class="math notranslate nohighlight">\(i\)</span> dari data kedua</p></li>
 </ul>
-<p>#<strong>Mengukur Jarak Tipe Categorical (Nominal)</strong>
-Digunakan untuk data dengan atribut kategori (misalnya: warna, jenis, dll).</p>
-<p>#<strong>1. Overlay Metric (OM)</strong>#<br />
-Menghitung jarak dengan cara membandingkan setiap atribut.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="mengukur-jarak-tipe-categorical-nominal">
+<h1><strong>Mengukur Jarak Tipe Categorical (Nominal)</strong><a class="headerlink" href="#mengukur-jarak-tipe-categorical-nominal" title="Link to this heading">#</a></h1>
+<p>Digunakan untuk data dengan atribut kategori (misalnya: warna, jenis, dll).</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="overlay-metric-om">
+<h1><strong>1. Overlay Metric (OM)</strong><a class="headerlink" href="#overlay-metric-om" title="Link to this heading">#</a></h1>
+<p>Menghitung jarak dengan cara membandingkan setiap atribut.</p>
 <div class="math notranslate nohighlight">
 \[
 d(x,y) = \sum_{i=1}^{n} \delta(a_i(x), a_i(y))
@@ -497,8 +622,10 @@ d(x,y) = \sum_{i=1}^{n} \delta(a_i(x), a_i(y))
 <li><p><span class="math notranslate nohighlight">\(\delta = 1\)</span> jika berbeda</p></li>
 </ul>
 <p>Intinya: hitung berapa banyak atribut yang berbeda.</p>
-<p>#<strong>2. Value Difference Metric (VDM)</strong><br />
-Mengukur jarak berdasarkan perbedaan probabilitas kelas dari tiap nilai atribut.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="value-difference-metric-vdm">
+<h1><strong>2. Value Difference Metric (VDM)</strong><a class="headerlink" href="#value-difference-metric-vdm" title="Link to this heading">#</a></h1>
+<p>Mengukur jarak berdasarkan perbedaan probabilitas kelas dari tiap nilai atribut.</p>
 <div class="math notranslate nohighlight">
 \[
 d(x,y) = \sum_{i=1}^{n} \sum_{c=1}^{C} |P(c|a_i(x)) - P(c|a_i(y))|
@@ -543,8 +670,10 @@ Setelah menjadi <span class="math notranslate nohighlight">\(z_{if}\)</span>, gu
 <li><p>Ranking → dinormalisasi</p></li>
 <li><p>Setelah itu → dihitung seperti data numerik</p></li>
 </ul>
-<p>#<strong>Menghitung Jarak Tipe Campuran</strong>
-Digunakan untuk data yang memiliki berbagai tipe atribut:
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="menghitung-jarak-tipe-campuran">
+<h1><strong>Menghitung Jarak Tipe Campuran</strong><a class="headerlink" href="#menghitung-jarak-tipe-campuran" title="Link to this heading">#</a></h1>
+<p>Digunakan untuk data yang memiliki berbagai tipe atribut:
 numerik, nominal, biner, dan ordinal.</p>
 <p>#<strong>Rumus Umum:</strong></p>
 <div class="math notranslate nohighlight">
@@ -589,13 +718,19 @@ z_{if} = \frac{r_{if} - 1}{M_f - 1}
 <p>Ini sering disebut juga sebagai Gower Distance</p>
 <p>#<strong>Implementasi Menghitung Jarak</strong>
 Menghitung jarak data numerik dari salah satu sampel data dibawah ini</p>
-<p>#<strong>Import Library</strong></p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="dataset-iris-numerik">
+<h1><strong>Dataset Iris (Numerik)</strong><a class="headerlink" href="#dataset-iris-numerik" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.spatial</span><span class="w"> </span><span class="kn">import</span> <span class="n">distance</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">math</span><span class="w"> </span><span class="kn">import</span> <span class="n">sqrt</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">google.colab</span><span class="w"> </span><span class="kn">import</span> <span class="n">files</span>
+<span class="n">uploaded</span> <span class="o">=</span> <span class="n">files</span><span class="o">.</span><span class="n">upload</span><span class="p">()</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;IRIS.csv&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -605,9 +740,253 @@ Menghitung jarak data numerik dari salah satu sampel data dibawah ini</p>
 <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span><span class="w"> </span><span class="nn">scipy.spatial</span><span class="w"> </span><span class="kn">import</span> <span class="n">distance</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">from</span><span class="w"> </span><span class="nn">google.colab</span><span class="w"> </span><span class="kn">import</span> <span class="n">files</span>
 
 <span class="ne">ModuleNotFoundError</span>: No module named &#39;pandas&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Tabel Tipe Data dan Penjelasan Kolom Dataset Iris</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Nama Kolom</p></th>
+<th class="head"><p>Tipe Data (Pandas)</p></th>
+<th class="head"><p>Jenis Atribut (Statistik)</p></th>
+<th class="head"><p>Penjelasan Fungsi Kolom</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">sepal_length</span></code></p></td>
+<td><p>float64</p></td>
+<td><p>Numerik (Kontinu)</p></td>
+<td><p>Ukuran panjang kelopak bunga (sepal) dalam satuan centimeter.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">sepal_width</span></code></p></td>
+<td><p>float64</p></td>
+<td><p>Numerik (Kontinu)</p></td>
+<td><p>Ukuran lebar kelopak bunga (sepal) dalam satuan centimeter.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">petal_length</span></code></p></td>
+<td><p>float64</p></td>
+<td><p>Numerik (Kontinu)</p></td>
+<td><p>Ukuran panjang mahkota bunga (petal) dalam satuan centimeter.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">petal_width</span></code></p></td>
+<td><p>float64</p></td>
+<td><p>Numerik (Kontinu)</p></td>
+<td><p>Ukuran lebar mahkota bunga (petal) dalam satuan centimeter.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">species</span></code></p></td>
+<td><p>object</p></td>
+<td><p>Kategorikal (Nominal)</p></td>
+<td><p>Label kelas (target) yang berisi teks nama spesies bunga Iris (<code class="docutils literal notranslate"><span class="pre">Iris-setosa</span></code>, <code class="docutils literal notranslate"><span class="pre">Iris-versicolor</span></code>, <code class="docutils literal notranslate"><span class="pre">Iris-virginica</span></code>).</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Ringkasan hasil deskripsi data:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Kategori Informasi</p></th>
+<th class="head"><p>Jumlah</p></th>
+<th class="head"><p>Nama Elemen</p></th>
+<th class="head"><p>Deskripsi Singkat</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Dimensi Dataset</strong></p></td>
+<td><p>150 Baris, 5 Kolom</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">sepal_length</span></code>, <code class="docutils literal notranslate"><span class="pre">sepal_width</span></code>, <code class="docutils literal notranslate"><span class="pre">petal_length</span></code>, <code class="docutils literal notranslate"><span class="pre">petal_width</span></code>, <code class="docutils literal notranslate"><span class="pre">species</span></code></p></td>
+<td><p>Total observasi sampel bunga Iris beserta seluruh variabelnya.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Atribut</strong></p></td>
+<td><p>4 Atribut</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">sepal_length</span></code>, <code class="docutils literal notranslate"><span class="pre">sepal_width</span></code>, <code class="docutils literal notranslate"><span class="pre">petal_length</span></code>, <code class="docutils literal notranslate"><span class="pre">petal_width</span></code></p></td>
+<td><p>Variabel numerik yang digunakan sebagai fitur untuk analisis atau proses klasifikasi.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Label</strong></p></td>
+<td><p>3 Kelas</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">species</span></code> (<code class="docutils literal notranslate"><span class="pre">Iris-setosa</span></code>, <code class="docutils literal notranslate"><span class="pre">Iris-versicolor</span></code>, <code class="docutils literal notranslate"><span class="pre">Iris-virginica</span></code>)</p></td>
+<td><p>Variabel dependen yang menjadi tujuan akhir dari klasifikasi.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Perhitungan Manual Jarak Dataset Iris</strong>
+Berdasarkan data sampel Iris (Indeks 0 dan Indeks 1):</p>
+<ul class="simple">
+<li><p>P1 (Indeks 0): (5.1, 3.5, 1.4, 0.2)</p></li>
+<li><p>P2 (Indeks 1): (4.9, 3.0, 1.4, 0.2)</p></li>
+</ul>
+<p><strong>Euclidean Distance</strong></p>
+<section id="persamaan-umum">
+<h2>Persamaan Umum<a class="headerlink" href="#persamaan-umum" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[
+d_{Euclidean}(p,q) =
+\sqrt{\sum_{i=1}^{n}(p_i - q_i)^2}
+\]</div>
+</section>
+<section id="implementasi-pada-fitur-iris">
+<h2>Implementasi pada fitur Iris<a class="headerlink" href="#implementasi-pada-fitur-iris" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[
+d =
+\sqrt{(SL_p - SL_q)^2 +
+(SW_p - SW_q)^2 +
+(PL_p - PL_q)^2 +
+(PW_p - PW_q)^2}
+\]</div>
+</section>
+<section id="contoh-perhitungan">
+<h2>Contoh Perhitungan<a class="headerlink" href="#contoh-perhitungan" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[
+d =
+\sqrt{(5.1-4.9)^2 + (3.5-3.0)^2 + (1.4-1.4)^2 + (0.2-0.2)^2}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+d =
+\sqrt{(0.2)^2 + (0.5)^2 + 0^2 + 0^2}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+d =
+\sqrt{0.04 + 0.25}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+d =
+\sqrt{0.29} \approx 0.5385
+\]</div>
+</section>
+<section id="id1">
+<h2>Manhattan Distance<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<section id="id2">
+<h3>Persamaan Umum:<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[
+d_{Manhattan}(p,q) =
+\sum_{i=1}^{n} |p_i - q_i|
+\]</div>
+</section>
+<section id="id3">
+<h3>Implementasi pada fitur Iris:<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[
+d =
+|SL_p - SL_q|
++
+|SW_p - SW_q|
++
+|PL_p - PL_q|
++
+|PW_p - PW_q|
+\]</div>
+</section>
+<section id="id4">
+<h3>Contoh Perhitungan:<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[
+d =
+|5.1 - 4.9|
++
+|3.5 - 3.0|
++
+|1.4 - 1.4|
++
+|0.2 - 0.2|
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+d =
+|0.2| + |0.5| + 0 + 0
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+d =
+0.2 + 0.5
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+d = 0.7000
+\]</div>
+</section>
+</section>
+<section id="ringkasan-hasil">
+<h2>Ringkasan Hasil<a class="headerlink" href="#ringkasan-hasil" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Metode Perhitungan</p></th>
+<th class="head"><p>Hasil Jarak</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Euclidean Distance</strong></p></td>
+<td><p><strong>0.5385</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Manhattan Distance</strong></p></td>
+<td><p><strong>0.7000</strong></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id5">
+<h1><strong>Euclidean Distance</strong><a class="headerlink" href="#id5" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sepal_length&#39;</span><span class="p">,</span> <span class="s1">&#39;sepal_width&#39;</span><span class="p">,</span> <span class="s1">&#39;petal_length&#39;</span><span class="p">,</span> <span class="s1">&#39;petal_width&#39;</span><span class="p">]</span>
+
+<span class="n">p1</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">cols</span><span class="p">]</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">cols</span><span class="p">]</span>
+
+<span class="n">euclidean</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(((</span><span class="n">p1</span> <span class="o">-</span> <span class="n">p2</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hasil Jarak Euclidean : </span><span class="si">{</span><span class="n">euclidean</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hasil Jarak Euclidean : 0.5385
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id6">
+<h1><strong>Manhattan Distance</strong><a class="headerlink" href="#id6" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sepal_length&#39;</span><span class="p">,</span> <span class="s1">&#39;sepal_width&#39;</span><span class="p">,</span> <span class="s1">&#39;petal_length&#39;</span><span class="p">,</span> <span class="s1">&#39;petal_width&#39;</span><span class="p">]</span>
+
+<span class="n">p1</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">cols</span><span class="p">]</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">cols</span><span class="p">]</span>
+
+<span class="n">manhattan</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">p1</span> <span class="o">-</span> <span class="n">p2</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hasil Jarak Euclidean : </span><span class="si">{</span><span class="n">manhattan</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hasil Jarak Euclidean : 0.7000
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="dataset-student-performance-campuran">
+<h1><strong>Dataset student performance (Campuran)</strong><a class="headerlink" href="#dataset-student-performance-campuran" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.spatial</span><span class="w"> </span><span class="kn">import</span> <span class="n">distance</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">math</span><span class="w"> </span><span class="kn">import</span> <span class="n">sqrt</span>
 </pre></div>
 </div>
 </div>
@@ -621,9 +1000,9 @@ Menghitung jarak data numerik dari salah satu sampel data dibawah ini</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-     <input type="file" id="files-e2885e03-4f78-4c56-9256-f3cc90b969e3" name="files[]" multiple disabled
+     <input type="file" id="files-7ed1ec49-d7ec-491f-be26-f68ac1b535f8" name="files[]" multiple disabled
         style="border:none" />
-     <output id="result-e2885e03-4f78-4c56-9256-f3cc90b969e3">
+     <output id="result-7ed1ec49-d7ec-491f-be26-f68ac1b535f8">
       Upload widget is only available when the cell has been executed in the
       current browser session. Please rerun this cell to enable.
       </output>
@@ -807,17 +1186,16 @@ scope.google.colab._files = {
 </div>
 </div>
 </div>
-<p>#<strong>Memuat Dataset</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;StudentsPerformance (1).csv&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;StudentsPerformance.csv&quot;</span><span class="p">)</span>
 <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-a67ee0e0-63c4-494d-a18d-a1bdec92eecf" class="colab-df-container">
+  <div id="df-3ba2a418-35fa-45b2-b73b-1eb763a343da" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -850,57 +1228,57 @@ scope.google.colab._files = {
     <tr>
       <th>0</th>
       <td>female</td>
-      <td>group B</td>
-      <td>bachelor's degree</td>
-      <td>standard</td>
-      <td>none</td>
-      <td>72</td>
-      <td>72</td>
+      <td>group D</td>
+      <td>master's degree</td>
+      <td>free/reduced</td>
+      <td>completed</td>
       <td>74</td>
+      <td>72</td>
+      <td>48</td>
     </tr>
     <tr>
       <th>1</th>
       <td>female</td>
-      <td>group C</td>
+      <td>group D</td>
       <td>some college</td>
-      <td>standard</td>
+      <td>free/reduced</td>
       <td>completed</td>
-      <td>69</td>
-      <td>90</td>
-      <td>88</td>
+      <td>100</td>
+      <td>97</td>
+      <td>65</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>female</td>
-      <td>group B</td>
-      <td>master's degree</td>
-      <td>standard</td>
+      <td>male</td>
+      <td>group E</td>
+      <td>high school</td>
+      <td>free/reduced</td>
       <td>none</td>
-      <td>90</td>
-      <td>95</td>
-      <td>93</td>
+      <td>70</td>
+      <td>100</td>
+      <td>53</td>
     </tr>
     <tr>
       <th>3</th>
       <td>male</td>
-      <td>group A</td>
-      <td>associate's degree</td>
-      <td>free/reduced</td>
-      <td>none</td>
-      <td>47</td>
-      <td>57</td>
-      <td>44</td>
+      <td>group B</td>
+      <td>master's degree</td>
+      <td>standard</td>
+      <td>completed</td>
+      <td>91</td>
+      <td>46</td>
+      <td>48</td>
     </tr>
     <tr>
       <th>4</th>
       <td>male</td>
-      <td>group C</td>
-      <td>some college</td>
-      <td>standard</td>
+      <td>group B</td>
+      <td>some high school</td>
+      <td>free/reduced</td>
       <td>none</td>
-      <td>76</td>
-      <td>78</td>
-      <td>75</td>
+      <td>84</td>
+      <td>53</td>
+      <td>83</td>
     </tr>
   </tbody>
 </table>
@@ -908,7 +1286,7 @@ scope.google.colab._files = {
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-a67ee0e0-63c4-494d-a18d-a1bdec92eecf')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-3ba2a418-35fa-45b2-b73b-1eb763a343da')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -960,12 +1338,12 @@ scope.google.colab._files = {
 
     <script>
       const buttonEl =
-        document.querySelector('#df-a67ee0e0-63c4-494d-a18d-a1bdec92eecf button.colab-df-convert');
+        document.querySelector('#df-3ba2a418-35fa-45b2-b73b-1eb763a343da button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-a67ee0e0-63c4-494d-a18d-a1bdec92eecf');
+        const element = document.querySelector('#df-3ba2a418-35fa-45b2-b73b-1eb763a343da');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -989,165 +1367,483 @@ scope.google.colab._files = {
   </div>
 </div></div>
 </div>
-<p>Data diatas didapatkan dari platform <a class="reference external" href="https://www.kaggle.com/datasets/spscientist/students-performance-in-exams?resource=download">https://www.kaggle.com/datasets/spscientist/students-performance-in-exams?resource=download</a></p>
-<p>Dataset ini berisi:</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="tabel-tipe-data-dan-penjelasan-kolom-atribut">
+<h1><strong>Tabel Tipe Data dan Penjelasan Kolom / Atribut</strong><a class="headerlink" href="#tabel-tipe-data-dan-penjelasan-kolom-atribut" title="Link to this heading">#</a></h1>
+<section id="tabel-tipe-data-dan-penjelasan-kolom-studentsperformance">
+<h2>Tabel Tipe Data dan Penjelasan Kolom (StudentsPerformance)<a class="headerlink" href="#tabel-tipe-data-dan-penjelasan-kolom-studentsperformance" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Nama Kolom</p></th>
+<th class="head"><p>Tipe Data (Pandas)</p></th>
+<th class="head"><p>Jenis Atribut (Statistik)</p></th>
+<th class="head"><p>Penjelasan Fungsi Kolom</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">gender</span></code></p></td>
+<td><p>object</p></td>
+<td><p>Kategorikal (Nominal)</p></td>
+<td><p>Menunjukkan jenis kelamin siswa (male atau female).</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">race/ethnicity</span></code></p></td>
+<td><p>object</p></td>
+<td><p>Kategorikal (Nominal)</p></td>
+<td><p>Kelompok ras atau etnis siswa yang dibagi menjadi beberapa grup (A–E).</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">parental</span> <span class="pre">level</span> <span class="pre">of</span> <span class="pre">education</span></code></p></td>
+<td><p>object</p></td>
+<td><p>Ordinal</p></td>
+<td><p>Tingkat pendidikan terakhir orang tua siswa, misalnya high school, some college, bachelor’s degree, dll.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">lunch</span></code></p></td>
+<td><p>object</p></td>
+<td><p>Kategorikal (Nominal)</p></td>
+<td><p>Jenis makan siang yang diterima siswa (standard atau free/reduced).</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">test</span> <span class="pre">preparation</span> <span class="pre">course</span></code></p></td>
+<td><p>object</p></td>
+<td><p>Kategorikal (Nominal)</p></td>
+<td><p>Menunjukkan apakah siswa mengikuti kursus persiapan ujian (completed atau none).</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">math</span> <span class="pre">score</span></code></p></td>
+<td><p>int64</p></td>
+<td><p>Numerik (Kontinu)</p></td>
+<td><p>Nilai ujian matematika siswa dengan rentang nilai 0–100.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">reading</span> <span class="pre">score</span></code></p></td>
+<td><p>int64</p></td>
+<td><p>Numerik (Kontinu)</p></td>
+<td><p>Nilai ujian membaca siswa dengan rentang nilai 0–100.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">writing</span> <span class="pre">score</span></code></p></td>
+<td><p>int64</p></td>
+<td><p>Numerik (Kontinu)</p></td>
+<td><p>Nilai ujian menulis siswa dengan rentang nilai 0–100.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="kolom-yang-digunakan-untuk-perhitungan-jarak">
+<h2>Kolom yang Digunakan untuk Perhitungan Jarak<a class="headerlink" href="#kolom-yang-digunakan-untuk-perhitungan-jarak" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Nama Kolom</p></th>
+<th class="head"><p>Tipe Data (Pandas)</p></th>
+<th class="head"><p>Jenis Atribut</p></th>
+<th class="head"><p>Keterangan</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">math</span> <span class="pre">score</span></code></p></td>
+<td><p>int64</p></td>
+<td><p>Numerik (Kontinu)</p></td>
+<td><p>Nilai ujian matematika siswa. Digunakan sebagai salah satu fitur untuk menghitung jarak antar data siswa.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">reading</span> <span class="pre">score</span></code></p></td>
+<td><p>int64</p></td>
+<td><p>Numerik (Kontinu)</p></td>
+<td><p>Nilai ujian membaca siswa. Digunakan dalam perhitungan jarak untuk melihat perbedaan kemampuan membaca.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">writing</span> <span class="pre">score</span></code></p></td>
+<td><p>int64</p></td>
+<td><p>Numerik (Kontinu)</p></td>
+<td><p>Nilai ujian menulis siswa. Digunakan sebagai fitur tambahan dalam menghitung jarak antar siswa.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Data</p></th>
+<th class="head"><p>Math Score</p></th>
+<th class="head"><p>Reading Score</p></th>
+<th class="head"><p>Writing Score</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Siswa P</strong></p></td>
+<td><p>72</p></td>
+<td><p>72</p></td>
+<td><p>74</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Siswa Q</strong></p></td>
+<td><p>69</p></td>
+<td><p>90</p></td>
+<td><p>88</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="numerik">
+<h2>Numerik<a class="headerlink" href="#numerik" title="Link to this heading">#</a></h2>
+<p>Pada perhitungan numerik ini saya menggunakan data kolom <code class="docutils literal notranslate"><span class="pre">math</span> <span class="pre">score</span></code>, <code class="docutils literal notranslate"><span class="pre">reading</span> <span class="pre">score</span></code>, dan <code class="docutils literal notranslate"><span class="pre">writing</span> <span class="pre">score</span></code> untuk menghitung jarak antara dua siswa (P0 dan P1) menggunakan ukuran jarak yang telah dijelaskan sebelumnya.</p>
+</section>
+<hr class="docutils" />
+<section id="euclidean-distance-normalized">
+<h2>Euclidean Distance (Normalized)<a class="headerlink" href="#euclidean-distance-normalized" title="Link to this heading">#</a></h2>
+<p>Jarak Euclidean adalah panjang garis lurus antara dua titik dalam ruang multidimensi. Rumus umumnya adalah:</p>
+<div class="math notranslate nohighlight">
+\[
+d_{Euclidean}(p,q) = \sqrt{\sum_{i=1}^{n} (p_i - q_i)^2}
+\]</div>
+<p>Jika diterapkan pada fitur numerik <strong>StudentsPerformance</strong> dengan normalisasi berbasis Range <span class="math notranslate nohighlight">\((R_k)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+d_{Euclidean\_Norm} =
+\sqrt{
+\left(\frac{Math_p - Math_q}{R_{Math}}\right)^2 +
+\left(\frac{Reading_p - Reading_q}{R_{Reading}}\right)^2 +
+\left(\frac{Writing_p - Writing_q}{R_{Writing}}\right)^2
+}
+\]</div>
+<hr class="docutils" />
+<section id="parameter-range-r-k">
+<h3>Parameter Range <span class="math notranslate nohighlight">\((R_k)\)</span>:<a class="headerlink" href="#parameter-range-r-k" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Numerik → math score, reading score, writing score</p></li>
-<li><p>Kategori → gender, race, lunch</p></li>
-<li><p>Ordinal (bisa dibuat) → tingkat pendidikan</p></li>
+<li><p><span class="math notranslate nohighlight">\(R_{Math} = 100\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(R_{Reading} = 100\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(R_{Writing} = 100\)</span></p></li>
 </ul>
-<p>#<strong>Data Pembanding</strong>
-Kita ambil 2 baris sebagai contoh perhitungan jarak.</p>
+<p>Range ini diperoleh dari rentang nilai ujian siswa yang berada pada skala <strong>0–100</strong>.</p>
+</section>
+<hr class="docutils" />
+<section id="contoh-data">
+<h3>Contoh Data<a class="headerlink" href="#contoh-data" title="Link to this heading">#</a></h3>
+<p>Misalkan diambil dua siswa:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Data</p></th>
+<th class="head"><p>Math Score</p></th>
+<th class="head"><p>Reading Score</p></th>
+<th class="head"><p>Writing Score</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>P0</strong></p></td>
+<td><p>72</p></td>
+<td><p>72</p></td>
+<td><p>74</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>P1</strong></p></td>
+<td><p>69</p></td>
+<td><p>90</p></td>
+<td><p>88</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="id7">
+<h3>Contoh Perhitungan<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[
+d =
+\sqrt{
+\left(\frac{72-69}{100}\right)^2 +
+\left(\frac{72-90}{100}\right)^2 +
+\left(\frac{74-88}{100}\right)^2
+}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+d =
+\sqrt{
+(0.03)^2 + (-0.18)^2 + (-0.14)^2
+}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+d =
+\sqrt{0.0009 + 0.0324 + 0.0196}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+d =
+\sqrt{0.0529}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+d \approx 0.230
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_1</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">data_2</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">data_1</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">data_2</span><span class="p">)</span>
+<span class="n">cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;math score&#39;</span><span class="p">,</span><span class="s1">&#39;reading score&#39;</span><span class="p">,</span><span class="s1">&#39;writing score&#39;</span><span class="p">]</span>
+
+<span class="n">p1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">72</span><span class="p">,</span><span class="mi">72</span><span class="p">,</span><span class="mi">74</span><span class="p">],</span> <span class="n">index</span><span class="o">=</span><span class="n">cols</span><span class="p">)</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">69</span><span class="p">,</span><span class="mi">90</span><span class="p">,</span><span class="mi">88</span><span class="p">],</span> <span class="n">index</span><span class="o">=</span><span class="n">cols</span><span class="p">)</span>
+
+<span class="n">ranges</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="n">euclidean</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(((</span><span class="n">p1</span> <span class="o">-</span> <span class="n">p2</span><span class="p">)</span> <span class="o">/</span> <span class="n">ranges</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Jarak Euclidean (Normalized) : </span><span class="si">{</span><span class="n">euclidean</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>gender                                    female
-race/ethnicity                           group B
-parental level of education    bachelor&#39;s degree
-lunch                                   standard
-test preparation course                     none
-math score                                    72
-reading score                                 72
-writing score                                 74
-Name: 0, dtype: object
-gender                               female
-race/ethnicity                      group C
-parental level of education    some college
-lunch                              standard
-test preparation course           completed
-math score                               69
-reading score                            90
-writing score                            88
-Name: 1, dtype: object
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Jarak Euclidean (Normalized) : 0.2300
 </pre></div>
 </div>
 </div>
 </div>
-<p>#<strong>1. TIPE NUMERIK</strong>
-ambil fitur numerik</p>
+</section>
+</section>
+<section id="perhitungan-manhattan-distance-normalized">
+<h2>Perhitungan Manhattan Distance (Normalized)<a class="headerlink" href="#perhitungan-manhattan-distance-normalized" title="Link to this heading">#</a></h2>
+<p>Jika diterapkan pada fitur numerik <strong>StudentsPerformance</strong> dengan normalisasi berbasis Range <span class="math notranslate nohighlight">\((R_k)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+d_{Manhattan\_Norm} = \sum_{k=1}^{n} \frac{|p_k - q_k|}{R_k}
+\]</div>
+<p>Jika diterapkan pada fitur nilai siswa:</p>
+<div class="math notranslate nohighlight">
+\[
+d_{Manhattan\_Norm} =
+\frac{|Math_p - Math_q|}{R_{Math}} +
+\frac{|Reading_p - Reading_q|}{R_{Reading}} +
+\frac{|Writing_p - Writing_q|}{R_{Writing}}
+\]</div>
+<hr class="docutils" />
+<section id="id8">
+<h3>Parameter Range <span class="math notranslate nohighlight">\((R_k)\)</span>:<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(R_{Math} = 100\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(R_{Reading} = 100\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(R_{Writing} = 100\)</span></p></li>
+</ul>
+<p>Range ini diperoleh dari rentang nilai ujian siswa yang berada pada skala <strong>0–100</strong>.</p>
+</section>
+<hr class="docutils" />
+<section id="substitusi-nilai-ke-dalam-rumus">
+<h3>Substitusi nilai ke dalam rumus<a class="headerlink" href="#substitusi-nilai-ke-dalam-rumus" title="Link to this heading">#</a></h3>
+<p>Misalkan dua siswa:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Data</p></th>
+<th class="head"><p>Math</p></th>
+<th class="head"><p>Reading</p></th>
+<th class="head"><p>Writing</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>P0</strong></p></td>
+<td><p>72</p></td>
+<td><p>72</p></td>
+<td><p>74</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>P1</strong></p></td>
+<td><p>69</p></td>
+<td><p>90</p></td>
+<td><p>88</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Substitusi:</p>
+<div class="math notranslate nohighlight">
+\[
+d =
+\frac{|72 - 69|}{100} +
+\frac{|72 - 90|}{100} +
+\frac{|74 - 88|}{100}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+d =
+\frac{3}{100} +
+\frac{18}{100} +
+\frac{14}{100}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+d =
+0.03 + 0.18 + 0.14
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+d = 0.35
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_1</span> <span class="o">=</span> <span class="n">data_1</span><span class="p">[[</span><span class="s1">&#39;math score&#39;</span><span class="p">,</span><span class="s1">&#39;reading score&#39;</span><span class="p">,</span><span class="s1">&#39;writing score&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">values</span>
-<span class="n">num_2</span> <span class="o">=</span> <span class="n">data_2</span><span class="p">[[</span><span class="s1">&#39;math score&#39;</span><span class="p">,</span><span class="s1">&#39;reading score&#39;</span><span class="p">,</span><span class="s1">&#39;writing score&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">values</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">num_1</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">num_2</span><span class="p">)</span>
+<span class="n">cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;math score&#39;</span><span class="p">,</span> <span class="s1">&#39;reading score&#39;</span><span class="p">,</span> <span class="s1">&#39;writing score&#39;</span><span class="p">]</span>
+
+<span class="n">p1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">72</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">74</span><span class="p">],</span> <span class="n">index</span><span class="o">=</span><span class="n">cols</span><span class="p">)</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">69</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">88</span><span class="p">],</span> <span class="n">index</span><span class="o">=</span><span class="n">cols</span><span class="p">)</span>
+
+<span class="n">ranges</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="n">manhattan</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">p1</span> <span class="o">-</span> <span class="n">p2</span><span class="p">)</span> <span class="o">/</span> <span class="n">ranges</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Jarak Manhattan (Normalized) : </span><span class="si">{</span><span class="n">manhattan</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[np.int64(72) np.int64(72) np.int64(74)]
-[np.int64(69) np.int64(90) np.int64(88)]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Jarak Manhattan (Normalized) : 0.3500
 </pre></div>
 </div>
 </div>
 </div>
-<p>Penjelasan:</p>
-<p>Hanya ambil nilai angka untuk dihitung jaraknya.</p>
-<p>#<strong>Euclidean Distance</strong></p>
+</section>
+</section>
+<section id="binary-categorical">
+<h2>Binary &amp; Categorical<a class="headerlink" href="#binary-categorical" title="Link to this heading">#</a></h2>
+<p>Pada perhitungan jarak untuk tipe data <strong>binary dan categorical</strong>, saya menggunakan data kolom <code class="docutils literal notranslate"><span class="pre">gender</span></code> (Binary) dan <code class="docutils literal notranslate"><span class="pre">lunch</span></code> (Categorical) untuk menghitung jarak antara dua siswa (P0 dan P1) menggunakan ukuran jarak yang telah dijelaskan sebelumnya.</p>
+<p>Pada tipe data ini, tidak ada urutan atau besaran angka. Jarak hanya dihitung berdasarkan apakah nilai tersebut <strong>sama atau berbeda</strong>.</p>
+<p>Jarak antara dua data <span class="math notranslate nohighlight">\(p\)</span> dan <span class="math notranslate nohighlight">\(q\)</span> untuk fitur kategorikal/biner didefinisikan sebagai:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+d(p,q) =
+\begin{cases}
+0, &amp; \text{jika } p = q \\
+1, &amp; \text{jika } p \neq q
+\end{cases}
+\end{split}\]</div>
+<section id="berdasarkan-data-sampel">
+<h3>Berdasarkan data sampel<a class="headerlink" href="#berdasarkan-data-sampel" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>P0:</strong> <code class="docutils literal notranslate"><span class="pre">gender</span></code> = female, <code class="docutils literal notranslate"><span class="pre">lunch</span></code> = standard</p></li>
+<li><p><strong>P1:</strong> <code class="docutils literal notranslate"><span class="pre">gender</span></code> = female, <code class="docutils literal notranslate"><span class="pre">lunch</span></code> = free/reduced</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="fitur-binary-gender">
+<h1><strong>1. Fitur Binary (<code class="docutils literal notranslate"><span class="pre">gender</span></code>)</strong><a class="headerlink" href="#fitur-binary-gender" title="Link to this heading">#</a></h1>
+<p>Perbandingan nilai untuk fitur jenis kelamin antara siswa P0 dan siswa P1:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(p_{gender}\)</span> = female</p></li>
+<li><p><span class="math notranslate nohighlight">\(q_{gender}\)</span> = female</p></li>
+</ul>
+<p>Karena nilai keduanya <strong>sama</strong>, maka:</p>
+<div class="math notranslate nohighlight">
+\[
+d_{gender}(p,q) = 0
+\]</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="fitur-categorical-lunch">
+<h1><strong>2. Fitur Categorical (<code class="docutils literal notranslate"><span class="pre">lunch</span></code>)</strong><a class="headerlink" href="#fitur-categorical-lunch" title="Link to this heading">#</a></h1>
+<p>Perbandingan nilai untuk fitur jenis makan siang antara siswa P0 dan siswa P1:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(p_{lunch}\)</span> = standard</p></li>
+<li><p><span class="math notranslate nohighlight">\(q_{lunch}\)</span> = free/reduced</p></li>
+</ul>
+<p>Karena nilai keduanya <strong>berbeda</strong>, maka:</p>
+<div class="math notranslate nohighlight">
+\[
+d_{lunch}(p,q) = 1
+\]</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="hasil-jarak">
+<h1><strong>Hasil Jarak</strong><a class="headerlink" href="#hasil-jarak" title="Link to this heading">#</a></h1>
+<p>Total jarak untuk fitur binary dan categorical dihitung sebagai:</p>
+<div class="math notranslate nohighlight">
+\[
+d = d_{gender} + d_{lunch}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+d = 0 + 1
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+d = 1
+\]</div>
+<section id="ordinal">
+<h2>Ordinal<a class="headerlink" href="#ordinal" title="Link to this heading">#</a></h2>
+<p>Pada perhitungan jarak untuk tipe data <strong>ordinal</strong>, saya menggunakan data kolom <code class="docutils literal notranslate"><span class="pre">parental</span> <span class="pre">level</span> <span class="pre">of</span> <span class="pre">education</span></code> untuk menghitung jarak antara dua siswa (P0 dan P1) menggunakan ukuran jarak yang telah dijelaskan sebelumnya.</p>
+</section>
+<section id="perhitungan-jarak-ordinal-parental-level-of-education">
+<h2>Perhitungan Jarak Ordinal (Parental Level of Education)<a class="headerlink" href="#perhitungan-jarak-ordinal-parental-level-of-education" title="Link to this heading">#</a></h2>
+<p>Pada fitur <code class="docutils literal notranslate"><span class="pre">parental</span> <span class="pre">level</span> <span class="pre">of</span> <span class="pre">education</span></code>, terdapat beberapa tingkatan pendidikan orang tua. Kita akan mengikuti prosedur <strong>normalisasi peringkat</strong> agar nilainya berada dalam rentang <strong>[0,1]</strong>.</p>
+<p>Urutan tingkat pendidikan dapat ditetapkan sebagai berikut:</p>
+<ol class="arabic simple">
+<li><p>some high school</p></li>
+<li><p>high school</p></li>
+<li><p>some college</p></li>
+<li><p>associate’s degree</p></li>
+<li><p>bachelor’s degree</p></li>
+<li><p>master’s degree</p></li>
+</ol>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="menentukan-peringkat-r-if-dan-nilai-maksimum-m-f">
+<h1><strong>1. Menentukan Peringkat <span class="math notranslate nohighlight">\((r_{if})\)</span> dan Nilai Maksimum <span class="math notranslate nohighlight">\((M_f)\)</span></strong><a class="headerlink" href="#menentukan-peringkat-r-if-dan-nilai-maksimum-m-f" title="Link to this heading">#</a></h1>
+<p>Berdasarkan dataset, terdapat <strong>6 tingkatan pendidikan</strong>, sehingga nilai maksimum:</p>
+<div class="math notranslate nohighlight">
+\[
+M_f = 6
+\]</div>
+<p>Misalnya dua siswa:</p>
+<ul class="simple">
+<li><p><strong>P0:</strong> parental level of education = bachelor’s degree</p></li>
+<li><p><strong>P1:</strong> parental level of education = some college</p></li>
+</ul>
+<p>Maka peringkatnya:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(r_{0,edu} = 5\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(r_{1,edu} = 3\)</span></p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="normalisasi-nilai-z-if">
+<h1><strong>2. Normalisasi Nilai <span class="math notranslate nohighlight">\((z_{if})\)</span></strong><a class="headerlink" href="#normalisasi-nilai-z-if" title="Link to this heading">#</a></h1>
+<p>Menggunakan rumus:</p>
+<div class="math notranslate nohighlight">
+\[
+z_{if} = \frac{r_{if} - 1}{M_f - 1}
+\]</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="perhitungan-normalisasi">
+<h1><strong>Perhitungan Normalisasi</strong><a class="headerlink" href="#perhitungan-normalisasi" title="Link to this heading">#</a></h1>
+<p>Untuk siswa <strong>P0</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+z_{0} = \frac{5-1}{6-1} = \frac{4}{5} = 0.8
+\]</div>
+<p>Untuk siswa <strong>P1</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+z_{1} = \frac{3-1}{6-1} = \frac{2}{5} = 0.4
+\]</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="menghitung-jarak-manhattan-pada-nilai-z-if">
+<h1><strong>3. Menghitung Jarak Manhattan pada Nilai <span class="math notranslate nohighlight">\(z_{if}\)</span></strong><a class="headerlink" href="#menghitung-jarak-manhattan-pada-nilai-z-if" title="Link to this heading">#</a></h1>
+<p>Jarak ordinal antara dua siswa P0 dan P1 dihitung sebagai selisih absolut dari nilai yang telah dinormalisasi:</p>
+<div class="math notranslate nohighlight">
+\[
+d_{Ordinal}(p,q) = |z_0 - z_1|
+\]</div>
+<p>Berdasarkan hasil normalisasi sebelumnya:</p>
+<div class="math notranslate nohighlight">
+\[
+z_0 = 0.8
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+z_1 = 0.4
+\]</div>
+<p>Sehingga:</p>
+<div class="math notranslate nohighlight">
+\[
+d_{Ordinal} = |0.8 - 0.4|
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+d_{Ordinal} = 0.4
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">euc_scipy</span> <span class="o">=</span> <span class="n">distance</span><span class="o">.</span><span class="n">euclidean</span><span class="p">(</span><span class="n">num_1</span><span class="p">,</span> <span class="n">num_2</span><span class="p">)</span>
-<span class="n">euc_numpy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">num_1</span> <span class="o">-</span> <span class="n">num_2</span><span class="p">)</span>
-<span class="n">euc_manual</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="nb">sum</span><span class="p">((</span><span class="n">x</span> <span class="o">-</span> <span class="n">y</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">num_1</span><span class="p">,</span> <span class="n">num_2</span><span class="p">)))</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Euclidean:&quot;</span><span class="p">,</span> <span class="n">euc_scipy</span><span class="p">,</span> <span class="n">euc_numpy</span><span class="p">,</span> <span class="n">euc_manual</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Euclidean: 23.0 23.0 23.0
-</pre></div>
-</div>
-</div>
-</div>
-<p>Penjelasan:</p>
-<p>Mengukur jarak lurus antar data.</p>
-<p>#<strong>Manhattan Distance</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">man_scipy</span> <span class="o">=</span> <span class="n">distance</span><span class="o">.</span><span class="n">cityblock</span><span class="p">(</span><span class="n">num_1</span><span class="p">,</span> <span class="n">num_2</span><span class="p">)</span>
-<span class="n">man_numpy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">num_1</span> <span class="o">-</span> <span class="n">num_2</span><span class="p">))</span>
-<span class="n">man_manual</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">num_1</span><span class="p">,</span> <span class="n">num_2</span><span class="p">))</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Manhattan:&quot;</span><span class="p">,</span> <span class="n">man_scipy</span><span class="p">,</span> <span class="n">man_numpy</span><span class="p">,</span> <span class="n">man_manual</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Manhattan: 35 35 35
-</pre></div>
-</div>
-</div>
-</div>
-<p>Penjelasan:</p>
-<p>Menjumlahkan selisih tiap fitur.</p>
-<p>#<strong>2. TIPE CATEGORICAL</strong>
-Ambil Data Kategori</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cat_1</span> <span class="o">=</span> <span class="n">data_1</span><span class="p">[[</span><span class="s1">&#39;gender&#39;</span><span class="p">,</span><span class="s1">&#39;race/ethnicity&#39;</span><span class="p">,</span><span class="s1">&#39;lunch&#39;</span><span class="p">]]</span>
-<span class="n">cat_2</span> <span class="o">=</span> <span class="n">data_2</span><span class="p">[[</span><span class="s1">&#39;gender&#39;</span><span class="p">,</span><span class="s1">&#39;race/ethnicity&#39;</span><span class="p">,</span><span class="s1">&#39;lunch&#39;</span><span class="p">]]</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">cat_1</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">cat_2</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>gender              female
-race/ethnicity     group B
-lunch             standard
-Name: 0, dtype: object
-gender              female
-race/ethnicity     group C
-lunch             standard
-Name: 1, dtype: object
-</pre></div>
-</div>
-</div>
-</div>
-<p>Penjelasan:</p>
-<p>Kategori tidak bisa langsung dihitung → pakai metode khusus.</p>
-<p>#<strong>Overlay Metric</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">overlay_metric</span><span class="p">(</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">):</span>
-    <span class="n">delta</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span> <span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="n">b</span> <span class="k">else</span> <span class="mi">1</span> <span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">)]</span>
-    <span class="n">total</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">delta</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">total</span><span class="p">,</span> <span class="n">total</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">p1</span><span class="p">)</span>
-
-<span class="n">jarak</span><span class="p">,</span> <span class="n">norm</span> <span class="o">=</span> <span class="n">overlay_metric</span><span class="p">(</span><span class="n">cat_1</span><span class="p">,</span> <span class="n">cat_2</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;OM:&quot;</span><span class="p">,</span> <span class="n">jarak</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Normalisasi:&quot;</span><span class="p">,</span> <span class="n">norm</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>OM: 1
-Normalisasi: 0.3333333333333333
-</pre></div>
-</div>
-</div>
-</div>
-<p>Penjelasan:</p>
-<p>Sama = 0</p>
-<p>Beda = 1</p>
-<p>Dijumlahkan → jadi jarak</p>
-<p>#<strong>3. TIPE ORDINAL</strong>
-Ubah ke ranking</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ranking</span> <span class="o">=</span> <span class="p">{</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">edu_rank</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">&quot;some high school&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
     <span class="s2">&quot;high school&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
     <span class="s2">&quot;some college&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
@@ -1156,89 +1852,221 @@ Ubah ke ranking</p>
     <span class="s2">&quot;master&#39;s degree&quot;</span><span class="p">:</span> <span class="mi">6</span>
 <span class="p">}</span>
 
-<span class="n">ord_1</span> <span class="o">=</span> <span class="n">ranking</span><span class="p">[</span><span class="n">data_1</span><span class="p">[</span><span class="s1">&#39;parental level of education&#39;</span><span class="p">]]</span>
-<span class="n">ord_2</span> <span class="o">=</span> <span class="n">ranking</span><span class="p">[</span><span class="n">data_2</span><span class="p">[</span><span class="s1">&#39;parental level of education&#39;</span><span class="p">]]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Penjelasan:</p>
-<p>Kategori diubah ke angka berdasarkan urutan.</p>
-<p><strong>Normalisasi</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">ranking</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<span class="n">p1_class</span> <span class="o">=</span> <span class="n">edu_rank</span><span class="p">[</span><span class="s2">&quot;bachelor&#39;s degree&quot;</span><span class="p">]</span>   <span class="c1"># 5</span>
+<span class="n">p2_class</span> <span class="o">=</span> <span class="n">edu_rank</span><span class="p">[</span><span class="s2">&quot;some college&quot;</span><span class="p">]</span>        <span class="c1"># 3</span>
 
-<span class="n">z1</span> <span class="o">=</span> <span class="p">(</span><span class="n">ord_1</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">M</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">z2</span> <span class="o">=</span> <span class="p">(</span><span class="n">ord_2</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">M</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">M</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">edu_rank</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">z1</span><span class="p">,</span> <span class="n">z2</span><span class="p">)</span>
+<span class="n">z1</span> <span class="o">=</span> <span class="p">(</span><span class="n">p1_class</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">M</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">z2</span> <span class="o">=</span> <span class="p">(</span><span class="n">p2_class</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">M</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">dist_ordinal</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">z1</span> <span class="o">-</span> <span class="n">z2</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Jarak Ordinal (Manhattan) : </span><span class="si">{</span><span class="n">dist_ordinal</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.8 0.4
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Jarak Ordinal (Manhattan) : 0.4000
 </pre></div>
 </div>
 </div>
 </div>
-<p>Penjelasan:</p>
-<p>Agar semua nilai berada di skala 0–1.</p>
-<p>#<strong>Hitung Jarak</strong></p>
+<section id="gowers-similarity-coefficient-tipe-campuran">
+<h2><strong>Gower’s Similarity Coefficient (Tipe Campuran)</strong><a class="headerlink" href="#gowers-similarity-coefficient-tipe-campuran" title="Link to this heading">#</a></h2>
+<p>Berdasarkan rumus Gower, kita akan menjumlahkan seluruh kontribusi jarak dari setiap fitur <span class="math notranslate nohighlight">\((d_{ij}^{(f)})\)</span> lalu membaginya dengan jumlah fitur <span class="math notranslate nohighlight">\((p)\)</span>.</p>
+<section id="rekapitulasi-kontribusi-jarak-d-ij-f">
+<h3><strong>1. Rekapitulasi Kontribusi Jarak <span class="math notranslate nohighlight">\((d_{ij}^{(f)})\)</span></strong><a class="headerlink" href="#rekapitulasi-kontribusi-jarak-d-ij-f" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Fitur (f)</p></th>
+<th class="head"><p>Tipe</p></th>
+<th class="head"><p>Nilai P0</p></th>
+<th class="head"><p>Nilai P1</p></th>
+<th class="head"><p>Perhitungan</p></th>
+<th class="head"><p>Skor <span class="math notranslate nohighlight">\((d_{ij}^{(f)})\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>math score</p></td>
+<td><p>Numerik</p></td>
+<td><p>72</p></td>
+<td><p>69</p></td>
+<td><p>$\frac{</p></td>
+<td><p>72-69</p></td>
+</tr>
+<tr class="row-odd"><td><p>reading score</p></td>
+<td><p>Numerik</p></td>
+<td><p>72</p></td>
+<td><p>90</p></td>
+<td><p>$\frac{</p></td>
+<td><p>72-90</p></td>
+</tr>
+<tr class="row-even"><td><p>writing score</p></td>
+<td><p>Numerik</p></td>
+<td><p>74</p></td>
+<td><p>88</p></td>
+<td><p>$\frac{</p></td>
+<td><p>74-88</p></td>
+</tr>
+<tr class="row-odd"><td><p>gender</p></td>
+<td><p>Biner</p></td>
+<td><p>female</p></td>
+<td><p>female</p></td>
+<td><p>female = female</p></td>
+<td><p>0.0000</p></td>
+</tr>
+<tr class="row-even"><td><p>lunch</p></td>
+<td><p>Nominal</p></td>
+<td><p>standard</p></td>
+<td><p>free/reduced</p></td>
+<td><p>standard ≠ free/reduced</p></td>
+<td><p>1.0000</p></td>
+</tr>
+<tr class="row-odd"><td><p>parental level of education</p></td>
+<td><p>Ordinal</p></td>
+<td><p>bachelor’s degree</p></td>
+<td><p>some college</p></td>
+<td><p>$</p></td>
+<td><p>0.8 - 0.4</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<section id="substitusi-ke-rumus-gower">
+<h2><strong>2. Substitusi ke Rumus Gower</strong><a class="headerlink" href="#substitusi-ke-rumus-gower" title="Link to this heading">#</a></h2>
+<p>Sesuai rumus:</p>
+<div class="math notranslate nohighlight">
+\[
+d(i,j) =
+\frac{\sum_{f=1}^{p} \delta_{ij}^{(f)} d_{ij}^{(f)}}
+{\sum_{f=1}^{p} \delta_{ij}^{(f)}}
+\]</div>
+<p>Karena semua data tersedia <span class="math notranslate nohighlight">\((\delta_{ij}=1)\)</span> dan total fitur <span class="math notranslate nohighlight">\((p)\)</span> adalah <strong>6</strong>, maka:</p>
+<div class="math notranslate nohighlight">
+\[
+d(0,1) =
+\frac{
+0.03 + 0.18 + 0.14 + 0 + 1 + 0.4
+}{6}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+d(0,1) =
+\frac{1.75}{6}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+d(0,1) \approx 0.2917
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">jarak_ord</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">z1</span> <span class="o">-</span> <span class="n">z2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Jarak Ordinal:&quot;</span><span class="p">,</span> <span class="n">jarak_ord</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ambil dua data</span>
+<span class="n">p1</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="c1"># --- Numerik ---</span>
+<span class="n">dist_math</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">p1</span><span class="p">[</span><span class="s1">&#39;math score&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">p2</span><span class="p">[</span><span class="s1">&#39;math score&#39;</span><span class="p">])</span> <span class="o">/</span> <span class="mi">100</span>
+<span class="n">dist_reading</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">p1</span><span class="p">[</span><span class="s1">&#39;reading score&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">p2</span><span class="p">[</span><span class="s1">&#39;reading score&#39;</span><span class="p">])</span> <span class="o">/</span> <span class="mi">100</span>
+<span class="n">dist_writing</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">p1</span><span class="p">[</span><span class="s1">&#39;writing score&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">p2</span><span class="p">[</span><span class="s1">&#39;writing score&#39;</span><span class="p">])</span> <span class="o">/</span> <span class="mi">100</span>
+
+<span class="c1"># --- Binary ---</span>
+<span class="n">dist_gender</span> <span class="o">=</span> <span class="mi">0</span> <span class="k">if</span> <span class="n">p1</span><span class="p">[</span><span class="s1">&#39;gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">p2</span><span class="p">[</span><span class="s1">&#39;gender&#39;</span><span class="p">]</span> <span class="k">else</span> <span class="mi">1</span>
+
+<span class="c1"># --- Nominal ---</span>
+<span class="n">dist_lunch</span> <span class="o">=</span> <span class="mi">0</span> <span class="k">if</span> <span class="n">p1</span><span class="p">[</span><span class="s1">&#39;lunch&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">p2</span><span class="p">[</span><span class="s1">&#39;lunch&#39;</span><span class="p">]</span> <span class="k">else</span> <span class="mi">1</span>
+
+<span class="c1"># --- Ordinal ---</span>
+<span class="n">edu_rank</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;some high school&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;high school&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span>
+    <span class="s2">&quot;some college&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span>
+    <span class="s2">&quot;associate&#39;s degree&quot;</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span>
+    <span class="s2">&quot;bachelor&#39;s degree&quot;</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span>
+    <span class="s2">&quot;master&#39;s degree&quot;</span><span class="p">:</span><span class="mi">6</span>
+<span class="p">}</span>
+
+<span class="n">r1</span> <span class="o">=</span> <span class="n">edu_rank</span><span class="p">[</span><span class="n">p1</span><span class="p">[</span><span class="s1">&#39;parental level of education&#39;</span><span class="p">]]</span>
+<span class="n">r2</span> <span class="o">=</span> <span class="n">edu_rank</span><span class="p">[</span><span class="n">p2</span><span class="p">[</span><span class="s1">&#39;parental level of education&#39;</span><span class="p">]]</span>
+
+<span class="n">M</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">edu_rank</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+
+<span class="n">z1</span> <span class="o">=</span> <span class="p">(</span><span class="n">r1</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">M</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">z2</span> <span class="o">=</span> <span class="p">(</span><span class="n">r2</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">M</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">dist_edu</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">z1</span> <span class="o">-</span> <span class="n">z2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="n">p1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">({</span>
+    <span class="s1">&#39;math score&#39;</span><span class="p">:</span> <span class="mi">72</span><span class="p">,</span>
+    <span class="s1">&#39;reading score&#39;</span><span class="p">:</span> <span class="mi">72</span><span class="p">,</span>
+    <span class="s1">&#39;writing score&#39;</span><span class="p">:</span> <span class="mi">74</span><span class="p">,</span>
+    <span class="s1">&#39;gender&#39;</span><span class="p">:</span> <span class="s1">&#39;female&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;lunch&#39;</span><span class="p">:</span> <span class="s1">&#39;standard&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;parental level of education&#39;</span><span class="p">:</span> <span class="s2">&quot;bachelor&#39;s degree&quot;</span>
+<span class="p">})</span>
+
+<span class="n">p2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">({</span>
+    <span class="s1">&#39;math score&#39;</span><span class="p">:</span> <span class="mi">69</span><span class="p">,</span>
+    <span class="s1">&#39;reading score&#39;</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span>
+    <span class="s1">&#39;writing score&#39;</span><span class="p">:</span> <span class="mi">88</span><span class="p">,</span>
+    <span class="s1">&#39;gender&#39;</span><span class="p">:</span> <span class="s1">&#39;female&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;lunch&#39;</span><span class="p">:</span> <span class="s1">&#39;free/reduced&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;parental level of education&#39;</span><span class="p">:</span> <span class="s1">&#39;some college&#39;</span>
+<span class="p">})</span>
+
+<span class="n">dist_math</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">p1</span><span class="p">[</span><span class="s1">&#39;math score&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">p2</span><span class="p">[</span><span class="s1">&#39;math score&#39;</span><span class="p">])</span> <span class="o">/</span> <span class="mi">100</span>
+<span class="n">dist_reading</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">p1</span><span class="p">[</span><span class="s1">&#39;reading score&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">p2</span><span class="p">[</span><span class="s1">&#39;reading score&#39;</span><span class="p">])</span> <span class="o">/</span> <span class="mi">100</span>
+<span class="n">dist_writing</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">p1</span><span class="p">[</span><span class="s1">&#39;writing score&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">p2</span><span class="p">[</span><span class="s1">&#39;writing score&#39;</span><span class="p">])</span> <span class="o">/</span> <span class="mi">100</span>
+
+<span class="n">dist_gender</span> <span class="o">=</span> <span class="mi">0</span> <span class="k">if</span> <span class="n">p1</span><span class="p">[</span><span class="s1">&#39;gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">p2</span><span class="p">[</span><span class="s1">&#39;gender&#39;</span><span class="p">]</span> <span class="k">else</span> <span class="mi">1</span>
+<span class="n">dist_lunch</span> <span class="o">=</span> <span class="mi">0</span> <span class="k">if</span> <span class="n">p1</span><span class="p">[</span><span class="s1">&#39;lunch&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">p2</span><span class="p">[</span><span class="s1">&#39;lunch&#39;</span><span class="p">]</span> <span class="k">else</span> <span class="mi">1</span>
+
+<span class="n">edu_rank</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;some high school&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;high school&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="s2">&quot;some college&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="s2">&quot;associate&#39;s degree&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="s2">&quot;bachelor&#39;s degree&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="s2">&quot;master&#39;s degree&quot;</span><span class="p">:</span> <span class="mi">6</span>
+<span class="p">}</span>
+
+<span class="n">r1</span> <span class="o">=</span> <span class="n">edu_rank</span><span class="p">[</span><span class="n">p1</span><span class="p">[</span><span class="s1">&#39;parental level of education&#39;</span><span class="p">]]</span>
+<span class="n">r2</span> <span class="o">=</span> <span class="n">edu_rank</span><span class="p">[</span><span class="n">p2</span><span class="p">[</span><span class="s1">&#39;parental level of education&#39;</span><span class="p">]]</span>
+
+<span class="n">M</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">edu_rank</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<span class="n">z1</span> <span class="o">=</span> <span class="p">(</span><span class="n">r1</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">M</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">z2</span> <span class="o">=</span> <span class="p">(</span><span class="n">r2</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">M</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">dist_edu</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">z1</span> <span class="o">-</span> <span class="n">z2</span><span class="p">)</span>
+
+<span class="n">list_jarak</span> <span class="o">=</span> <span class="p">[</span><span class="n">dist_math</span><span class="p">,</span> <span class="n">dist_reading</span><span class="p">,</span> <span class="n">dist_writing</span><span class="p">,</span> <span class="n">dist_gender</span><span class="p">,</span> <span class="n">dist_lunch</span><span class="p">,</span> <span class="n">dist_edu</span><span class="p">]</span>
+<span class="n">hasil_gower</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">list_jarak</span><span class="p">)</span> <span class="o">/</span> <span class="mi">6</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Total Jarak Gower (P0 vs P1): </span><span class="si">{</span><span class="n">hasil_gower</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Jarak Ordinal: 0.4
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total Jarak Gower (P0 vs P1): 0.2917
 </pre></div>
 </div>
 </div>
 </div>
-<p>Penjelasan:</p>
-<p>Setelah normalisasi → dihitung seperti numerik.</p>
-<p>#<strong>4. TIPE CAMPURAN (MIXED)</strong>
-Hitung Jarak Campuran</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Range numerik untuk normalisasi</span>
-<span class="n">range_math</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;math score&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;math score&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">jarak_campuran</span><span class="p">(</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">):</span>
-    <span class="c1"># Numerik</span>
-    <span class="n">d_num</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">p1</span><span class="p">[</span><span class="s1">&#39;math score&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">p2</span><span class="p">[</span><span class="s1">&#39;math score&#39;</span><span class="p">])</span> <span class="o">/</span> <span class="n">range_math</span>
-
-    <span class="c1"># Kategori</span>
-    <span class="n">d_cat</span> <span class="o">=</span> <span class="mi">0</span> <span class="k">if</span> <span class="n">p1</span><span class="p">[</span><span class="s1">&#39;gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">p2</span><span class="p">[</span><span class="s1">&#39;gender&#39;</span><span class="p">]</span> <span class="k">else</span> <span class="mi">1</span>
-
-    <span class="c1"># Ordinal</span>
-    <span class="n">r1</span> <span class="o">=</span> <span class="n">ranking</span><span class="p">[</span><span class="n">p1</span><span class="p">[</span><span class="s1">&#39;parental level of education&#39;</span><span class="p">]]</span>
-    <span class="n">r2</span> <span class="o">=</span> <span class="n">ranking</span><span class="p">[</span><span class="n">p2</span><span class="p">[</span><span class="s1">&#39;parental level of education&#39;</span><span class="p">]]</span>
-    <span class="n">z1</span> <span class="o">=</span> <span class="p">(</span><span class="n">r1</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">M</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
-    <span class="n">z2</span> <span class="o">=</span> <span class="p">(</span><span class="n">r2</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">M</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
-    <span class="n">d_ord</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">z1</span> <span class="o">-</span> <span class="n">z2</span><span class="p">)</span>
-
-    <span class="k">return</span> <span class="p">(</span><span class="n">d_num</span> <span class="o">+</span> <span class="n">d_cat</span> <span class="o">+</span> <span class="n">d_ord</span><span class="p">)</span><span class="o">/</span><span class="mi">3</span>
-
-<span class="n">hasil</span> <span class="o">=</span> <span class="n">jarak_campuran</span><span class="p">(</span><span class="n">data_1</span><span class="p">,</span> <span class="n">data_2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Jarak Campuran:&quot;</span><span class="p">,</span> <span class="n">hasil</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Jarak Campuran: 0.14333333333333334
-</pre></div>
-</div>
-</div>
-</div>
-<p>Penjelasan:</p>
-<p>Numerik → selisih normalisasi</p>
-<p>Kategori → sama/beda</p>
-<p>Ordinal → ranking</p>
-<p>Semua dirata-rata</p>
+</section>
+<section id="kesimpulan-akhir">
+<h2><strong>Kesimpulan Akhir</strong><a class="headerlink" href="#kesimpulan-akhir" title="Link to this heading">#</a></h2>
+<p>Hasil akhir perhitungan <strong>Gower Distance</strong> antara Siswa 0 dan Siswa 1 adalah <strong>0.2133</strong>.</p>
+<p>Nilai ini merepresentasikan rata-rata ketidaksamaan dari seluruh tipe atribut yang digunakan, yaitu atribut <strong>numerik</strong> (math score, reading score, writing score), <strong>binary</strong> (gender), <strong>kategorikal</strong> (lunch), dan <strong>ordinal</strong> (parental level of education).</p>
+<p>Semakin mendekati nilai <strong>0</strong>, maka kedua objek semakin <strong>serupa</strong>, sedangkan nilai yang mendekati <strong>1</strong> menunjukkan perbedaan yang semakin besar.</p>
+<p>Dalam kasus ini, skor <strong>0.2133</strong> menunjukkan bahwa kedua siswa memiliki <strong>tingkat kemiripan yang cukup tinggi</strong>, karena nilai jaraknya relatif kecil. Perbedaan yang muncul terutama dipengaruhi oleh variasi pada nilai ujian dan beberapa atribut kategorikal, sementara beberapa atribut lainnya memiliki nilai yang sama atau mendekati.</p>
 </section>
 </section>
 
@@ -1297,8 +2125,82 @@ Hitung Jarak Campuran</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Mengukur Jarak Data</strong></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengukur-jarak-data-tipe-numerik"><strong>Mengukur Jarak Data (Tipe Numerik)</strong></a></li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#minkowski-distance"><strong>1. Minkowski Distance</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#manhattan-distance"><strong>2. Manhattan Distance</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#euclidean-distance"><strong>3. Euclidean Distance</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#average-distance"><strong>4. Average Distance</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#weighted-euclidean-distance"><strong>5. Weighted Euclidean Distance</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#chord-distance"><strong>6. Chord Distance</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mahalanobis-distance"><strong>7. Mahalanobis Distance</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#cosine-similarity"><strong>8. Cosine Similarity</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pearson-correlation"><strong>9. Pearson Correlation</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#biner-simetris"><strong>Biner Simetris</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mengukur-jarak-tipe-categorical-nominal"><strong>Mengukur Jarak Tipe Categorical (Nominal)</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#overlay-metric-om"><strong>1. Overlay Metric (OM)</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#value-difference-metric-vdm"><strong>2. Value Difference Metric (VDM)</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-jarak-tipe-campuran"><strong>Menghitung Jarak Tipe Campuran</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-iris-numerik"><strong>Dataset Iris (Numerik)</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#persamaan-umum">Persamaan Umum</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-pada-fitur-iris">Implementasi pada fitur Iris</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-perhitungan">Contoh Perhitungan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Manhattan Distance</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Persamaan Umum:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Implementasi pada fitur Iris:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Contoh Perhitungan:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ringkasan-hasil">Ringkasan Hasil</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id5"><strong>Euclidean Distance</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id6"><strong>Manhattan Distance</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-student-performance-campuran"><strong>Dataset student performance (Campuran)</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tabel-tipe-data-dan-penjelasan-kolom-atribut"><strong>Tabel Tipe Data dan Penjelasan Kolom / Atribut</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tabel-tipe-data-dan-penjelasan-kolom-studentsperformance">Tabel Tipe Data dan Penjelasan Kolom (StudentsPerformance)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kolom-yang-digunakan-untuk-perhitungan-jarak">Kolom yang Digunakan untuk Perhitungan Jarak</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numerik">Numerik</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#euclidean-distance-normalized">Euclidean Distance (Normalized)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parameter-range-r-k">Parameter Range <span class="math notranslate nohighlight">\((R_k)\)</span>:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-data">Contoh Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Contoh Perhitungan</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perhitungan-manhattan-distance-normalized">Perhitungan Manhattan Distance (Normalized)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Parameter Range <span class="math notranslate nohighlight">\((R_k)\)</span>:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#substitusi-nilai-ke-dalam-rumus">Substitusi nilai ke dalam rumus</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#binary-categorical">Binary &amp; Categorical</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#berdasarkan-data-sampel">Berdasarkan data sampel</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#fitur-binary-gender"><strong>1. Fitur Binary (<code class="docutils literal notranslate"><span class="pre">gender</span></code>)</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#fitur-categorical-lunch"><strong>2. Fitur Categorical (<code class="docutils literal notranslate"><span class="pre">lunch</span></code>)</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-jarak"><strong>Hasil Jarak</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ordinal">Ordinal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perhitungan-jarak-ordinal-parental-level-of-education">Perhitungan Jarak Ordinal (Parental Level of Education)</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#menentukan-peringkat-r-if-dan-nilai-maksimum-m-f"><strong>1. Menentukan Peringkat <span class="math notranslate nohighlight">\((r_{if})\)</span> dan Nilai Maksimum <span class="math notranslate nohighlight">\((M_f)\)</span></strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#normalisasi-nilai-z-if"><strong>2. Normalisasi Nilai <span class="math notranslate nohighlight">\((z_{if})\)</span></strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#perhitungan-normalisasi"><strong>Perhitungan Normalisasi</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-jarak-manhattan-pada-nilai-z-if"><strong>3. Menghitung Jarak Manhattan pada Nilai <span class="math notranslate nohighlight">\(z_{if}\)</span></strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gowers-similarity-coefficient-tipe-campuran"><strong>Gower’s Similarity Coefficient (Tipe Campuran)</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rekapitulasi-kontribusi-jarak-d-ij-f"><strong>1. Rekapitulasi Kontribusi Jarak <span class="math notranslate nohighlight">\((d_{ij}^{(f)})\)</span></strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#substitusi-ke-rumus-gower"><strong>2. Substitusi ke Rumus Gower</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan-akhir"><strong>Kesimpulan Akhir</strong></a></li>
+</ul>
+</li>
+</ul>
+
   </nav></div>
 
 </div></div>
