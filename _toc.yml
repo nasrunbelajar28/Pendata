@@ -8,3 +8,5 @@ chapters:
 - file: Pertemuan2
 - file: Mengukur_Jarak_Data
 - file: Missing_Values_Inputation
+- file: analisis_kesuburan_tanah_knn
+- file: laporan_naive_bayes_diabetes
