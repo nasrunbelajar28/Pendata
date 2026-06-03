@@ -62,6 +62,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Peramalan_NO2_Surabaya';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Regresi Linier Sederhana dengan Operasi Matriks" href="regresi_linier.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -124,8 +125,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -181,7 +180,7 @@
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Pertemuan1.html">Pertemuan 1</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Pertemuan2.html"><strong>Eksplorasi Data</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Mengukur_Jarak_Data.html"><strong>Mengukur Jarak Data</strong></a></li>
@@ -249,6 +248,7 @@
 <li class="toctree-l1"><a class="reference internal" href="pertemuan11.html">Pertemuan 11</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pertemuan12.html">Laporan Klasifikasi Menggunakan Random Forest di KNIME</a></li>
 <li class="toctree-l1"><a class="reference internal" href="regresi_linier.html">Regresi Linier Sederhana dengan Operasi Matriks</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Peramalan kadar <span class="math notranslate nohighlight">\(NO_2\)</span> di daerah Surabaya</a></li>
 </ul>
 
     </div>
@@ -494,15 +494,13 @@ document.write(`
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>^C
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Note: you may need to restart the kernel to use updated packages.
-Collecting openeo
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting openeo
   Using cached openeo-0.50.0-py3-none-any.whl.metadata (8.9 kB)
 Requirement already satisfied: requests&gt;=2.26.0 in d:\penambangan data\venv\lib\site-packages (from openeo) (2.32.5)
 Requirement already satisfied: urllib3&gt;=1.9.0 in d:\penambangan data\venv\lib\site-packages (from openeo) (2.6.3)
 Collecting shapely&gt;=1.6.4 (from openeo)
   Using cached shapely-2.1.2-cp311-cp311-win_amd64.whl.metadata (7.1 kB)
-Collecting numpy&gt;=1.17.0 (from openeo)
-  Using cached numpy-2.4.6-cp311-cp311-win_amd64.whl.metadata (6.6 kB)
+Requirement already satisfied: numpy&gt;=1.17.0 in d:\penambangan data\venv\lib\site-packages (from openeo) (2.4.6)
 Collecting xarray&lt;2025.01.2,&gt;=0.12.3 (from openeo)
   Using cached xarray-2025.1.1-py3-none-any.whl.metadata (11 kB)
 Collecting pandas&lt;3.0.0,&gt;0.20.0 (from openeo)
@@ -511,24 +509,18 @@ Collecting pystac&gt;=1.5.0 (from openeo)
   Using cached pystac-1.14.3-py3-none-any.whl.metadata (4.7 kB)
 Collecting deprecated&gt;=1.2.12 (from openeo)
   Using cached deprecated-1.3.1-py2.py3-none-any.whl.metadata (5.9 kB)
-Collecting oschmod&gt;=0.3.12 (from openeo)
-  Using cached oschmod-0.3.12-py2.py3-none-any.whl.metadata (10.0 kB)
+Requirement already satisfied: oschmod&gt;=0.3.12 in d:\penambangan data\venv\lib\site-packages (from openeo) (0.3.12)
 Collecting geopandas&gt;=0.14 (from openeo)
   Using cached geopandas-1.1.3-py3-none-any.whl.metadata (2.3 kB)
-Collecting wrapt&lt;3,&gt;=1.10 (from deprecated&gt;=1.2.12-&gt;openeo)
-  Using cached wrapt-2.2.1-cp311-cp311-win_amd64.whl.metadata (7.6 kB)
+Requirement already satisfied: wrapt&lt;3,&gt;=1.10 in d:\penambangan data\venv\lib\site-packages (from deprecated&gt;=1.2.12-&gt;openeo) (2.2.1)
 Collecting pyogrio&gt;=0.7.2 (from geopandas&gt;=0.14-&gt;openeo)
   Using cached pyogrio-0.12.1-cp311-cp311-win_amd64.whl.metadata (6.0 kB)
 Requirement already satisfied: packaging in d:\penambangan data\venv\lib\site-packages (from geopandas&gt;=0.14-&gt;openeo) (26.0)
-Collecting pyproj&gt;=3.5.0 (from geopandas&gt;=0.14-&gt;openeo)
-  Using cached pyproj-3.7.2-cp311-cp311-win_amd64.whl.metadata (31 kB)
-Collecting pywin32 (from oschmod&gt;=0.3.12-&gt;openeo)
-  Using cached pywin32-311-cp311-cp311-win_amd64.whl.metadata (10 kB)
+Requirement already satisfied: pyproj&gt;=3.5.0 in d:\penambangan data\venv\lib\site-packages (from geopandas&gt;=0.14-&gt;openeo) (3.7.2)
+Requirement already satisfied: pywin32 in d:\penambangan data\venv\lib\site-packages (from oschmod&gt;=0.3.12-&gt;openeo) (311)
 Requirement already satisfied: python-dateutil&gt;=2.8.2 in d:\penambangan data\venv\lib\site-packages (from pandas&lt;3.0.0,&gt;0.20.0-&gt;openeo) (2.9.0.post0)
-Collecting pytz&gt;=2020.1 (from pandas&lt;3.0.0,&gt;0.20.0-&gt;openeo)
-  Using cached pytz-2026.2-py2.py3-none-any.whl.metadata (22 kB)
-Collecting tzdata&gt;=2022.7 (from pandas&lt;3.0.0,&gt;0.20.0-&gt;openeo)
-  Downloading tzdata-2026.2-py2.py3-none-any.whl.metadata (1.4 kB)
+Requirement already satisfied: pytz&gt;=2020.1 in d:\penambangan data\venv\lib\site-packages (from pandas&lt;3.0.0,&gt;0.20.0-&gt;openeo) (2026.2)
+Requirement already satisfied: tzdata&gt;=2022.7 in d:\penambangan data\venv\lib\site-packages (from pandas&lt;3.0.0,&gt;0.20.0-&gt;openeo) (2026.2)
 Requirement already satisfied: charset_normalizer&lt;4,&gt;=2 in d:\penambangan data\venv\lib\site-packages (from requests&gt;=2.26.0-&gt;openeo) (3.4.4)
 Requirement already satisfied: idna&lt;4,&gt;=2.5 in d:\penambangan data\venv\lib\site-packages (from requests&gt;=2.26.0-&gt;openeo) (3.11)
 Requirement already satisfied: certifi&gt;=2017.4.17 in d:\penambangan data\venv\lib\site-packages (from requests&gt;=2.26.0-&gt;openeo) (2026.1.4)
@@ -536,24 +528,15 @@ Requirement already satisfied: six&gt;=1.5 in d:\penambangan data\venv\lib\site-
 Using cached openeo-0.50.0-py3-none-any.whl (345 kB)
 Using cached deprecated-1.3.1-py2.py3-none-any.whl (11 kB)
 Using cached geopandas-1.1.3-py3-none-any.whl (342 kB)
-Using cached numpy-2.4.6-cp311-cp311-win_amd64.whl (12.6 MB)
-Using cached oschmod-0.3.12-py2.py3-none-any.whl (14 kB)
 Using cached pandas-2.3.3-cp311-cp311-win_amd64.whl (11.3 MB)
 Using cached pystac-1.14.3-py3-none-any.whl (208 kB)
 Using cached shapely-2.1.2-cp311-cp311-win_amd64.whl (1.7 MB)
 Using cached xarray-2025.1.1-py3-none-any.whl (1.2 MB)
 Using cached pyogrio-0.12.1-cp311-cp311-win_amd64.whl (22.9 MB)
-Using cached pyproj-3.7.2-cp311-cp311-win_amd64.whl (6.3 MB)
-Using cached pytz-2026.2-py2.py3-none-any.whl (510 kB)
-Downloading tzdata-2026.2-py2.py3-none-any.whl (349 kB)
-   ---------------------------------------- 0.0/349.3 kB ? eta -:--:--
-   --- ----------------------------------- 30.7/349.3 kB 640.0 kB/s eta 0:00:01
-   ---------- ---------------------------- 92.2/349.3 kB 871.5 kB/s eta 0:00:01
-   ----------------------------------- ---- 307.2/349.3 kB 2.1 MB/s eta 0:00:01
-   ---------------------------------------- 349.3/349.3 kB 1.8 MB/s eta 0:00:00
-Using cached wrapt-2.2.1-cp311-cp311-win_amd64.whl (80 kB)
-Using cached pywin32-311-cp311-cp311-win_amd64.whl (9.5 MB)
-Installing collected packages: pywin32, pytz, wrapt, tzdata, pyproj, oschmod, numpy, shapely, pystac, pyogrio, pandas, deprecated, xarray, geopandas, openeo
+Installing collected packages: shapely, pyogrio, deprecated, pystac, pandas, xarray, geopandas, openeo
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Note: you may need to restart the kernel to use updated packages.
 </pre></div>
 </div>
 </div>
@@ -1720,6 +1703,15 @@ MAPE: 26.9373%
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="regresi_linier.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Regresi Linier Sederhana dengan Operasi Matriks</p>
+      </div>
+    </a>
 </div>
                 </footer>
               
