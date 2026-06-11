@@ -491,30 +491,22 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>^C
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting openeo
   Using cached openeo-0.50.0-py3-none-any.whl.metadata (8.9 kB)
 Requirement already satisfied: requests&gt;=2.26.0 in d:\penambangan data\venv\lib\site-packages (from openeo) (2.32.5)
 Requirement already satisfied: urllib3&gt;=1.9.0 in d:\penambangan data\venv\lib\site-packages (from openeo) (2.6.3)
-Collecting shapely&gt;=1.6.4 (from openeo)
-  Using cached shapely-2.1.2-cp311-cp311-win_amd64.whl.metadata (7.1 kB)
+Requirement already satisfied: shapely&gt;=1.6.4 in d:\penambangan data\venv\lib\site-packages (from openeo) (2.1.2)
 Requirement already satisfied: numpy&gt;=1.17.0 in d:\penambangan data\venv\lib\site-packages (from openeo) (2.4.6)
 Collecting xarray&lt;2025.01.2,&gt;=0.12.3 (from openeo)
   Using cached xarray-2025.1.1-py3-none-any.whl.metadata (11 kB)
-Collecting pandas&lt;3.0.0,&gt;0.20.0 (from openeo)
-  Using cached pandas-2.3.3-cp311-cp311-win_amd64.whl.metadata (19 kB)
-Collecting pystac&gt;=1.5.0 (from openeo)
-  Using cached pystac-1.14.3-py3-none-any.whl.metadata (4.7 kB)
-Collecting deprecated&gt;=1.2.12 (from openeo)
-  Using cached deprecated-1.3.1-py2.py3-none-any.whl.metadata (5.9 kB)
+Requirement already satisfied: pandas&lt;3.0.0,&gt;0.20.0 in d:\penambangan data\venv\lib\site-packages (from openeo) (2.3.3)
+Requirement already satisfied: pystac&gt;=1.5.0 in d:\penambangan data\venv\lib\site-packages (from openeo) (1.14.3)
+Requirement already satisfied: deprecated&gt;=1.2.12 in d:\penambangan data\venv\lib\site-packages (from openeo) (1.3.1)
 Requirement already satisfied: oschmod&gt;=0.3.12 in d:\penambangan data\venv\lib\site-packages (from openeo) (0.3.12)
 Collecting geopandas&gt;=0.14 (from openeo)
   Using cached geopandas-1.1.3-py3-none-any.whl.metadata (2.3 kB)
 Requirement already satisfied: wrapt&lt;3,&gt;=1.10 in d:\penambangan data\venv\lib\site-packages (from deprecated&gt;=1.2.12-&gt;openeo) (2.2.1)
-Collecting pyogrio&gt;=0.7.2 (from geopandas&gt;=0.14-&gt;openeo)
-  Using cached pyogrio-0.12.1-cp311-cp311-win_amd64.whl.metadata (6.0 kB)
+Requirement already satisfied: pyogrio&gt;=0.7.2 in d:\penambangan data\venv\lib\site-packages (from geopandas&gt;=0.14-&gt;openeo) (0.12.1)
 Requirement already satisfied: packaging in d:\penambangan data\venv\lib\site-packages (from geopandas&gt;=0.14-&gt;openeo) (26.0)
 Requirement already satisfied: pyproj&gt;=3.5.0 in d:\penambangan data\venv\lib\site-packages (from geopandas&gt;=0.14-&gt;openeo) (3.7.2)
 Requirement already satisfied: pywin32 in d:\penambangan data\venv\lib\site-packages (from oschmod&gt;=0.3.12-&gt;openeo) (311)
@@ -526,17 +518,15 @@ Requirement already satisfied: idna&lt;4,&gt;=2.5 in d:\penambangan data\venv\li
 Requirement already satisfied: certifi&gt;=2017.4.17 in d:\penambangan data\venv\lib\site-packages (from requests&gt;=2.26.0-&gt;openeo) (2026.1.4)
 Requirement already satisfied: six&gt;=1.5 in d:\penambangan data\venv\lib\site-packages (from python-dateutil&gt;=2.8.2-&gt;pandas&lt;3.0.0,&gt;0.20.0-&gt;openeo) (1.17.0)
 Using cached openeo-0.50.0-py3-none-any.whl (345 kB)
-Using cached deprecated-1.3.1-py2.py3-none-any.whl (11 kB)
 Using cached geopandas-1.1.3-py3-none-any.whl (342 kB)
-Using cached pandas-2.3.3-cp311-cp311-win_amd64.whl (11.3 MB)
-Using cached pystac-1.14.3-py3-none-any.whl (208 kB)
-Using cached shapely-2.1.2-cp311-cp311-win_amd64.whl (1.7 MB)
 Using cached xarray-2025.1.1-py3-none-any.whl (1.2 MB)
-Using cached pyogrio-0.12.1-cp311-cp311-win_amd64.whl (22.9 MB)
-Installing collected packages: shapely, pyogrio, deprecated, pystac, pandas, xarray, geopandas, openeo
+Installing collected packages: xarray, geopandas, openeo
+Successfully installed geopandas-1.1.3 openeo-0.50.0 xarray-2025.1.1
+Note: you may need to restart the kernel to use updated packages.
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Note: you may need to restart the kernel to use updated packages.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[notice] A new release of pip is available: 24.0 -&gt; 26.1.2
+[notice] To update, run: python.exe -m pip install --upgrade pip
 </pre></div>
 </div>
 </div>
@@ -551,10 +541,7 @@ Installing collected packages: shapely, pyogrio, deprecated, pystac, pandas, xar
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html">Visit <a href="https://identity.dataspace.copernicus.eu/auth/realms/CDSE/device?user_code=XJTE-MBWY" title="Authenticate at https://identity.dataspace.copernicus.eu/auth/realms/CDSE/device?user_code=XJTE-MBWY" target="_blank" rel="noopener noreferrer">https://identity.dataspace.copernicus.eu/auth/realms/CDSE/device?user_code=XJTE-MBWY</a> <a href="#" onclick="navigator.clipboard.writeText('https://identity.dataspace.copernicus.eu/auth/realms/CDSE/device?user_code=XJTE-MBWY');return false;" title="Copy authentication URL to clipboard">&#128203;</a> to authenticate.</div><div class="output text_html">✅ Authorized successfully</div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Authenticated using device code flow.
-</pre></div>
-</div>
-</div>
+<div class="output text_html">Visit <a href="https://identity.dataspace.copernicus.eu/auth/realms/CDSE/device?user_code=JPLD-ZRBG" title="Authenticate at https://identity.dataspace.copernicus.eu/auth/realms/CDSE/device?user_code=JPLD-ZRBG" target="_blank" rel="noopener noreferrer">https://identity.dataspace.copernicus.eu/auth/realms/CDSE/device?user_code=JPLD-ZRBG</a> <a href="#" onclick="navigator.clipboard.writeText('https://identity.dataspace.copernicus.eu/auth/realms/CDSE/device?user_code=JPLD-ZRBG');return false;" title="Copy authentication URL to clipboard">&#128203;</a> to authenticate.</div><div class="output text_html"><code>[###################################--]</code> ⌛ Authorization pending</div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
